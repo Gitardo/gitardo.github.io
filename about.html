@@ -3,8 +3,8 @@
   
   <head>
     
-    <script async src="https://api.beta.glia.com/salemove_integration.js" type="text/javascript">
-      document.getElementById("demo").onclick = function() {myFunction()};
+    <script id="demoBubble" async src="https://api.beta.glia.com/salemove_integration.js" type="text/javascript">
+      document.getElementById("demoBubble").onclick = function() {myFunction()};
       function myFunction() {
         sm.getApi({version: 'v1'}).then(function(glia) {
           glia.queueForEngagement('text', {queueId: '25ad5365-2ffe-4ca6-97e2-3a942a0d60dd'})
