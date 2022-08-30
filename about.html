@@ -3,14 +3,21 @@
   
   <head>
     
-    <script id="demoBubble" async src="https://api.beta.glia.com/salemove_integration.js" type="text/javascript">
-      document.getElementById('demoBubble').onclick = function() {myFunctionBubble()};
-      function myFunctionBubble() {
-        sm.getApi({version: 'v1'}).then(function(salemove) {
-          salemove.queueForEngagement('text', {queueId: '25ad5365-2ffe-4ca6-97e2-3a942a0d60dd'})
-            .catch(function(error) { alert(error); });
-        });
-      }
+    <script async src="https://api.beta.glia.com/salemove_integration.js" type="text/javascript">
+      const observeNode = document.getElementsByClassName("sm-visitor-app")[0];
+      const config = { attributes: true, childList: true, subtree: true };
+      const callback = (mutationList, observer) => {
+       for (const mutation of mutationList) {
+          if (mutation.type === 'childList') {
+              const targetToClick = document.getElementsByClassName("sm-media-button-text")[0]; //Possible values: "sm-media-button-video", "sm-media-button-audio", "sm-media-button-phone", "sm-media-button-text"
+             if(targetToClick){
+                 targetToClick.click();
+             }
+         }
+        }
+      };
+      const observer = new MutationObserver(callback);
+      observer.observe(observeNode, config);
     </script>
     
   </head>
