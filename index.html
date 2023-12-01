@@ -5,7 +5,24 @@
   <head>
     
     <script async src="https://api.beta.glia.com/salemove_integration.js" type="text/javascript"></script>
-    
+
+    <!--
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.salemove.com https://*.glia.com;" />
+    <meta http-equiv="Content-Security-Policy" content="connect-src 'self' wss://*.salemove.com https://*.salemove.com wss://*.glia.com https://*.glia.com https://*.twilio.com wss://*.twilio.com;" />
+    <meta http-equiv="Content-Security-Policy" content="media-src 'self' https://*.salemove.com https://*.glia.com;" />
+    <meta http-equiv="Content-Security-Policy" content="style-src 'self' 'unsafe-inline' https://*.salemove.com https://*.glia.com;" />
+    <meta http-equiv="Content-Security-Policy" content="font-src 'self' data:;" />
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' blob: data: https://*.salemove.com https://*.glia.com;" />
+    -->
+
+    <!-- Test blocking audio to check that it works -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval'" />
+    <meta http-equiv="Content-Security-Policy" content="connect-src 'self'" />
+    <meta http-equiv="Content-Security-Policy" content="media-src 'self'" />
+    <meta http-equiv="Content-Security-Policy" content="style-src 'self'" />
+    <meta http-equiv="Content-Security-Policy" content="font-src 'self' data:;" />
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' blob: data:;" />
+
   </head>
   
   <body style="background-color:LightGrey;">
