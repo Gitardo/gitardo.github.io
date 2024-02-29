@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    
+    <script async src="https://api.beta.glia.com/salemove_integration.js" type="text/javascript"></script>
+
+    <script type="text/javascript" id="glia-js-spanish-locale">
+      __gliaLocaleSpanish = function() {
+        sm.getApi({version: 'v1'}).then(function(api) {
+          api.setLocale('gerardo-es-SP');
+        });
+        console.log("Spanish locale loaded");
+      };
+    </script>
+    
+  </head>
+  
+  <body style="background-color:LightGrey;">
+
+    <h1>Sitio Beta de Gerardo</h1>
+    
+    <p>Página 3</p>
+    
+    <p>Vuelve al <a href="https://gitardo.github.io/">Índice</a></p>
+
+  </body>
+  
+</html>
