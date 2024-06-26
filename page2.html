@@ -21,22 +21,37 @@
     <p>Page 2</p>
     
     <div class="a-label" id="languageLabel">English</div>
-    <button id="toggleLanguage">Toggle Language</button>
+    <!-- <div class="a-label" id="languageLabel">English</div> -->
+    <!-- <button id="toggleLanguage">Toggle Language</button> -->
  
     <p>Back to <a href="https://gitardo.github.io/">Index</a></p>
 
     <script>
-      const languageLabel = document.getElementById('languageLabel');
-      const toggleLanguageButton = document.getElementById('toggleLanguage');
+      /// const languageLabel = document.getElementById('languageLabel');
+      /// const toggleLanguageButton = document.getElementById('toggleLanguage');
+      
+      /// let isEnglish = true;
+      
+      /// toggleLanguageButton.addEventListener('click', function() {
+      ///   if (isEnglish) {
+      ///     languageLabel.textContent = 'Français';
+      ///     isEnglish = false;
+      ///   } else {
+      ///     languageLabel.textContent = 'English';
+      ///     isEnglish = true;
+      ///   }
+      /// });
+      
+      const languageLabel = document.getElementsByClassName('a-label')[0];
       
       let isEnglish = true;
       
-      toggleLanguageButton.addEventListener('click', function() {
+      languageLabel.addEventListener('click', function() {
         if (isEnglish) {
-          languageLabel.textContent = 'Français';
+          this.textContent = 'Français';
           isEnglish = false;
         } else {
-          languageLabel.textContent = 'English';
+          this.textContent = 'English';
           isEnglish = true;
         }
       });
