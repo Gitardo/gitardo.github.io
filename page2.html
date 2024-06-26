@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   
   <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!---<script async src="https://api.beta.glia.com/salemove_integration.js" type="text/javascript"></script>--->
     <!--- Testing "weird" script from OTS SECU https://www.secumd.org/more/virtualfinancialcenter/ (SSD-21447)--->
@@ -17,7 +20,27 @@
     
     <p>Page 2</p>
     
+    <div class="a-label" id="languageLabel">English</div>
+    <button id="toggleLanguage">Toggle Language</button>
+ 
     <p>Back to <a href="https://gitardo.github.io/">Index</a></p>
+
+    <script>
+      const languageLabel = document.getElementById('languageLabel');
+      const toggleLanguageButton = document.getElementById('toggleLanguage');
+      
+      let isEnglish = true;
+      
+      toggleLanguageButton.addEventListener('click', function() {
+        if (isEnglish) {
+          languageLabel.textContent = 'Français';
+          isEnglish = false;
+        } else {
+          languageLabel.textContent = 'English';
+          isEnglish = true;
+        }
+      });
+    </script>   
 
   </body>
   
