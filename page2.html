@@ -48,16 +48,30 @@
       
       languageLabel.addEventListener('click', function() {
         if (isEnglish) {
-          this.textContent = 'Français';
-          languageLabel.id = 'languageLabelFr';
+          this.textContent = 'Spanish';
+          languageLabel.id = 'languageLabelSp';
           isEnglish = false;
+          __spanishLocale();
         } else {
           this.textContent = 'English';
           languageLabel.id = 'languageLabelEn';
           isEnglish = true;
+          __englishLocale();
         }
       });
     </script>   
+    <script type="text/javascript" id="glia-js-english-locale">
+        __englishLocale = function() {
+        sm.getApi({version: 'v1'}).then(function(api){api.setLocale('gerardo-cusotm-locale-en')});
+        //sm.logger.log("English locale loaded");
+      }
+    </script>
+    <script type="text/javascript" id="glia-js-spanish-locale">
+        __spanishLocale = function() {
+        sm.getApi({version: 'v1'}).then(function(api){api.setLocale('gerardo-es-SP')});
+        //sm.logger.log("Spanish locale loaded");
+      }
+    </script>
 
   </body>
   
