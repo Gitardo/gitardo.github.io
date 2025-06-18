@@ -72,6 +72,11 @@
       <label for="no">No</label><br>
       <input type="submit" value="Submit CoBrowsing disabled" class="form-control input-md sm_cobrowsing_disabled_field">
     </form>
+
+    <!-- Test CE-6558 https://docs.glia.com/glia-dev/docs/showing-visitor-code -->
+    <button class="omnibrowse-code-button" onclick="document.body.appendChild(document.createElement('sm-visitor-code'))">
+      Get CoBrowsing code
+    </button>
     
     <!--Tests for SSD-31876<a data-sm-show-media-selection-on="click" href="javascript:void(0);">Let's chat!</a>-->
     <p id="letschatid" name="letschatname" style="text-align:right;">Let's chat!</p>
